@@ -42,8 +42,36 @@ function App() {
                         </ul>
                     </Box>
                 </Box>
-                <Box gridArea='main'>
-                    <h1>Menu Item One</h1>
+                <Box gridArea='main'
+                     border='1px solid black'
+                     display='flex'
+                     margin='10rem 0 0 0'
+                     flexDirection='column'
+                     alignItems='center'
+                     height='100vh'
+                >
+                    <Box border='1px solid red'>
+                        <h1>Login</h1>
+                        <form>
+                            <label>
+                                Email:
+                                <input type="text" name="email"/>
+                            </label>
+                            <br/>
+                            <br/>
+                            <label>
+                                Password:
+                                <input type="text" name="password"/>
+                            </label>
+                        </form>
+                        <Box border='1px solid black' margin='1rem 0 0 0'>
+                            <button>Register</button>
+                            <button>Forgot Password</button>
+                        </Box>
+                    </Box>
+                </Box>
+                <Box gridArea='footer' border='1px solid black'>
+                    <h1>Footer</h1>
                 </Box>
             </Box>
         </React.Fragment>

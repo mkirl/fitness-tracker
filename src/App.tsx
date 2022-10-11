@@ -16,9 +16,11 @@ const headerItemStyle = {
 function App() {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [showLoginMenu, setShowLoginMenu] = useState(false);
 
     const handleLogin = () => {
         setIsLoggedIn(!isLoggedIn);
+        setShowLoginMenu(!showLoginMenu);
     }
     return (
         //render header
@@ -42,13 +44,13 @@ function App() {
                         </ul>
                     </Box>
                 </Box>
-                <Box gridArea='main'
-                     border='1px solid black'
-                     display='flex'
-                     margin='10rem 0 0 0'
-                     flexDirection='column'
-                     alignItems='center'
-                     height='100vh'
+                {showLoginMenu && <Box gridArea='main'
+                                       border='1px solid black'
+                                       display='flex'
+                                       margin='10rem 0 0 0'
+                                       flexDirection='column'
+                                       alignItems='center'
+                    // height='100vh'
                 >
                     <Box border='1px solid red'>
                         <h1>Login</h1>
@@ -69,7 +71,8 @@ function App() {
                             <button>Forgot Password</button>
                         </Box>
                     </Box>
-                </Box>
+                </Box>}
+
                 <Box gridArea='footer' border='1px solid black'>
                     <h1>Footer</h1>
                 </Box>
